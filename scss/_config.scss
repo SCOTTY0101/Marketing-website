@@ -1,0 +1,22 @@
+$font-stack: Arial, Helvetica, sans-serif;
+$light-color: #fff;
+$primary-color: #009699; //comment out to test
+//$primary-color: #e0ffff; // for use with the functionk
+$secondary-color: #0099fa;
+
+//set text colour based on bg @function creates a function. need @if and @else @return
+@function set-text-color($color) {
+    @if(lightness($color) > 70) {
+        @return #333;
+    } @else {
+        @return #fff;
+    }
+
+}
+
+//set backgroung ans text colour
+@mixin set-background($color) {
+    background-color: $color;
+    color: set-text-color($color);
+}
+

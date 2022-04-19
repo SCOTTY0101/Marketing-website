@@ -1,0 +1,87 @@
+@import 'config';
+@import 'utilities';
+@import 'buttons';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    
+    background-color: $light-color;
+    font-family: $font-stack;
+    line-height: 1.6;
+    //background-image: url("../image/lights.jpg");
+}
+
+img {
+    width: 100%;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    position: sticky;
+}
+
+.showcase {
+    @include set-background($primary-color);
+   // background-color: $primary-color; //use @include set-background()
+    //color: set-text-color($primary-color);               // change to set text colour function #fff;
+    height: 600px;
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        ul {
+            display: flex;
+            list-style-type: none;
+        }
+
+        li {
+            padding: 15px;
+        }
+
+        a {
+            color: set-text-color($primary-color);
+        }
+
+        a:hover {
+            color: $secondary-color;
+        }
+
+        //a {
+         //   color: #fff;
+        //}
+
+    .showcase-content { // can also use &-contect
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+        img {
+            width: 50%;
+        }
+
+        h1 {
+            font-size: 50px;
+            line-height: 1.2;
+        }
+
+        //p { //removed for adding a for loop.
+        //    margin: 20px;
+        //}
+    }
+}
+
+@import 'mobile';
