@@ -1,2 +1,2 @@
 # Marketing-website
-Basic website with bootstrap and sass.
+Website built with bootstrap and sass.
